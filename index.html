@@ -15,17 +15,15 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Let GPT Tell You">
 <meta property="og:site_name" content="lgty.me">
-<meta property="og:url" content="https://lgty.me/">
-<meta property="og:image" content="http://lgty.me/android-chrome-192x192.png">
+<meta property="og:url" content="./">
 <meta name="og:description" content="For all those people that find it more convenient to bother you with their question rather than to GPT it for themselves.">
 <meta http-equiv="content-language" content="en">
 
-<link rel="canonical" href="https://lgty.me/">
+<link rel="canonical" href="./">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="lgty.me">
 <meta name="twitter:title" content="Let GPT Tell You">
 <meta name="twitter:description" content="For all those people that find it more convenient to bother you with their question rather than to GPT it for themselves.">
-<meta name="twitter:image" content="http://lgty.me/android-chrome-192x192.png">
   
 
 
@@ -38,20 +36,23 @@
 
 
   <link rel="stylesheet" id="font-awesome-css" href="assets/font-awesome.min.css" type="text/css" media="all">
-  <link rel="shortcut icon" href="https://lgty.me/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="https://lgty.me/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://lgty.me/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://lgty.me/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://lgty.me/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="https://lgty.me/android-chrome-512x512.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="https://lgty.me/android-chrome-192x192.png">
-
-  <link rel="manifest" href="https://lgty.me/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="assets/open_sans.min.css">
   <link rel="stylesheet" href="assets/style.min.css">
+
+  <script>
+    var siteBaseUrl = new URL(".", window.location.href);
+
+    function buildSiteUrl(query) {
+      var url = new URL(siteBaseUrl);
+      if (query) {
+        url.searchParams.set("q", query);
+      }
+      return url.toString();
+    }
+  </script>
 
 
 
@@ -123,7 +124,7 @@
     <div class="row">
       <div class="logo-row notranslate">
 
-        <a href="https://lgty.me/" title="Let GPT Tell You" alt="Let GPT Tell You" style="text-decoration: none !important; ">
+        <a href="./" title="Let GPT Tell You" alt="Let GPT Tell You" style="text-decoration: none !important; ">
 
           <text style="font-size:58px;font-weight: bold;color:#4285F4;letter-spacing: -5px;">L</text>
           <text style="font-size:58px;font-weight: bold;color:#EA4334;letter-spacing: -4px;margin-left:-2px">e</text>
@@ -185,7 +186,7 @@
       <div id="url-output" style="display:none">
         <output for="search-input" name="url-output" class="url-output">
           <label for="url-result" class="url-result-label"></label>
-          <input style="border-radius:2px;border-color:#4FE9F9 !important;font-size:12px;min-width:300px;max-width:100%;" width="100%" id="url-result" class="search-input url-result" value="https://lgty.me/">
+          <input style="border-radius:2px;border-color:#4FE9F9 !important;font-size:12px;min-width:300px;max-width:100%;" width="100%" id="url-result" class="search-input url-result" value="./">
           <!-- give them the option to shorten the url --><br>
 
           <small>
@@ -229,12 +230,12 @@
 
       <br>
 
-      <a id="allfacebook" href="https://lgty.me/" target="_blank"><img src="assets/facebook.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
-      <a id="alltwitter" href="https://lgty.me/" target="_blank"><img src="assets/twitter.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
-      <a id="allemail" href="https://lgty.me/" target="_blank"><img src="assets/email.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
-      <a id="allsms" href="https://lgty.me/" target="_blank"><img src="assets/sms.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
-      <a id="allwhatsapp" href="https://lgty.me/" target="_blank"><img src="assets/whatsapp.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
-      <a id="allcopy" href="https://lgty.me/" target="_blank"><img src="assets/link.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
+      <a id="allfacebook" href="./" target="_blank"><img src="assets/facebook.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
+      <a id="alltwitter" href="./" target="_blank"><img src="assets/twitter.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
+      <a id="allemail" href="./" target="_blank"><img src="assets/email.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
+      <a id="allsms" href="./" target="_blank"><img src="assets/sms.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
+      <a id="allwhatsapp" href="./" target="_blank"><img src="assets/whatsapp.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
+      <a id="allcopy" href="./" target="_blank"><img src="assets/link.svg" width="32" height="32" style="background-color:#4FE9F9"></a>
     </div>
 
 
@@ -263,12 +264,13 @@
       //myFunction();
 
       document.getElementById("instructions2").innerHTML = "Done! <a href=#  onclick=\"myFunction();\" style=\"color:#fff\"><U>Copy</U></a>, <a style=\"color:#fff\" onclick=\"mySharedata();\" href=\"#addthisbuttons\"><U>Share</U></a> Or <a href=\"#previewsearchbox\" onclick=\"GoPreview();\" style=\"color:#fff\" id=\"previewgeneratedlink\" title=\"Preview Search\" ><u>Preview Search</u></a><a href=\"#url-output\"><div class=\"arrow bounce\"></div></a>";
-      //document.getElementById("previewlink1").href = "https://lgty.me/?q="+ document.getElementById("search-input").value;
-      //document.getElementById("previewlink2").href = "https://lgty.me/?q="+ document.getElementById("search-input").value;
-      document.getElementById("url-output").value = "https://lgty.me/?q=" + document.getElementById("search-input").value;
-      document.getElementById("preview-search-link1").href = "https://lgty.me/?q=" + document.getElementById("search-input").value;
-      document.getElementById("preview-search-link2").href = "https://lgty.me/?q=" + document.getElementById("search-input").value;
-      document.getElementById("url-result").value = "https://lgty.me/?q=" + encodeURIComponent(document.getElementById("search-input").value);
+      //document.getElementById("previewlink1").href = buildSiteUrl(document.getElementById("search-input").value);
+      //document.getElementById("previewlink2").href = buildSiteUrl(document.getElementById("search-input").value);
+      var siteUrl = buildSiteUrl(document.getElementById("search-input").value);
+      document.getElementById("url-output").value = siteUrl;
+      document.getElementById("preview-search-link1").href = siteUrl;
+      document.getElementById("preview-search-link2").href = siteUrl;
+      document.getElementById("url-result").value = siteUrl;
 
       myShare();
     }
@@ -290,7 +292,7 @@
   </script>
   <script>
     function GoPreview() {
-      window.open("https://lgty.me/?q=" + document.getElementById("search-input").value, '_blank');
+      window.open(buildSiteUrl(document.getElementById("search-input").value), '_blank');
     }
   </script>
   <script>
@@ -507,37 +509,36 @@
   </style>
 
   <script>
+    function updateShareLinks() {
+      var shareUrl = encodeURIComponent(document.getElementById("url-result").value);
+      var searchquerytext = document.getElementById("search-input").value;
+      var shareLinkName = encodeURIComponent("searchquery:" + searchquerytext);
+      var shareServices = [
+        { name: "facebook", id: "allfacebook" },
+        { name: "twitter", id: "alltwitter" },
+        { name: "email", id: "allemail" },
+        { name: "sms", id: "allsms" },
+        { name: "whatsapp", id: "allwhatsapp" },
+        { name: "copy_link", id: "allcopy" }
+      ];
+
+      document.getElementById("searchquerytext").innerHTML = searchquerytext;
+      shareServices.forEach(function (service) {
+        document.getElementById(service.id).href =
+          "https://www.addtoany.com/add_to/" + service.name +
+          "?linkurl=" + shareUrl + "&linkname=" + shareLinkName;
+      });
+    }
+
     function myShare() {
       document.getElementById("addthisbuttons").style.display = "block";
-      var searchquery = document.getElementById("url-result").value.split("https://lgty.me")[1];
-      var searchquerytext = document.getElementById("search-input").value;
-      document.getElementById("searchquerytext").innerHTML = searchquerytext;
-
-
-
-      document.getElementById("allfacebook").href = "https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("alltwitter").href = "https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allemail").href = "https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allsms").href = "https://www.addtoany.com/add_to/sms?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allwhatsapp").href = "https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allcopy").href = "https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
+      updateShareLinks();
     }
   </script>
   <script>
     function myShareLucky() {
       document.getElementById("addthisbuttons").style.display = "block";
-      var searchquery = document.getElementById("url-result").value.split("https://lgty.me")[1];
-      var searchquerytext = document.getElementById("search-input").value;
-      document.getElementById("searchquerytext").innerHTML = searchquerytext;
-
-
-
-      document.getElementById("allfacebook").href = "https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("alltwitter").href = "https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allemail").href = "https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allsms").href = "https://www.addtoany.com/add_to/sms?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allwhatsapp").href = "https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
-      document.getElementById("allcopy").href = "https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Flgty.me" + encodeURIComponent(searchquery) + "&amp;linkname=searchquery:" + searchquerytext;
+      updateShareLinks();
     }
   </script>
 
